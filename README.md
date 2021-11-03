@@ -4,6 +4,4 @@
 
 ### Colabs -- Anthony Williams, Michael (jimmie) Hendricks, Michael Ryan, Kassie B-radshaw
 
-## Pix-R-Picks is an app that utilizes facial recognition to analyze your facial emotion and return a pixar movie that correlates with such emotion. The movie is decided by using Text analysis to analyze the movie script for key words to do with emotion.
-
-
+**Pix-R-Picks is an app that utilizes facial recognition to analyze your facial emotion and return a pixar movie that correlates with such emotion. The movie is decided by using Text analysis to analyze the movie script for key words to do with emotion.**
