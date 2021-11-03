@@ -1,3 +1,23 @@
+# DreamTeamAlphaOne
+
+## [Team Agreement](prep/TeamAgreement.md)
+
+## [Software Requirements](prep/requirements.md)
+
+## [Link To Trello Board With User Stories](https://trello.com/b/pq4HjcrR/disneyteamalphaone)
+
+## Wireframes
+
+![Wireframe Images](DreamTeamAlphaOne/prep/img/DatabaseSchema.jpg)
+
+## Domain Model
+
+![Domain Model](prep/img/DomainModel.jpg)
+
+## Database Schema
+
+![Database Schema](prep/img/DatabaseSchema.jpg)
+
 
 # DreamTeamAlphaOne
 
@@ -141,3 +161,4 @@ One of the reviewers
 
 ## How will you communicate that it’s time to merge? 
 DSU -- Slack -- Remo
+
