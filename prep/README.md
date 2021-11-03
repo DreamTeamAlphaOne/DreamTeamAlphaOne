@@ -8,15 +8,15 @@
 
 ## Wireframes
 
-![Wireframe Images](DreamTeamAlphaOne/prep/img/DatabaseSchema.jpg)
+![Wireframe Images](img/DatabaseSchema.jpg)
 
 ## Domain Model
 
-![Domain Model](prep/img/DomainModel.jpg)
+![Domain Model](img/DomainModel.jpg)
 
 ## Database Schema
 
-![Database Schema](prep/img/DatabaseSchema.jpg)
+![Database Schema](img/DatabaseSchema.jpg)
 
 
 # DreamTeamAlphaOne
