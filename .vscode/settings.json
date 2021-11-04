@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./dlib/python_examples",
+        "./pages/dlib/python_examples"
+    ]
+}
