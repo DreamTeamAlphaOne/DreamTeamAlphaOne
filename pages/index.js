@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from './header'
 import Footer from './footer'
+import ShowMovie from './show_movie'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       </Head>
       <Header />
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
+        <ShowMovie />
         <p>Hello World</p>
       </main>
 
