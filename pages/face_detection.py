@@ -1,7 +1,7 @@
 import cv2
 import os
 import dlib
-import numpy as np
+# import numpy as np
 
 
 
@@ -30,25 +30,27 @@ def findFace():
             flags = cv2.CASCADE_SCALE_IMAGE,
         )
 
-        # for (x, y, w, h) in faces:
-        #     cv2.rectangle(frames, (x, y), (x+w, y+h), (0, 255, 0), 2)
-        #     # print('working-2')
-        for face in faces:
-            x1 = face.left()
-            y1 = face.top()
-            x2 = face.right()
-            y2 = face.bottom()
+        faces = detector(gray)
+        
+        for (x, y, w, h) in faces:
+            cv2.rectangle(frames, (x, y), (x+w, y+h), (0, 255, 0), 2)
+            # print('working-2')
+        # for face in faces:
+        #     x1 = face.left
+        #     y1 = face.top
+        #     x2 = face.right
+        #     y2 = face.bottom
 
-            cv2.rectangle(frames, pt1 = (x1, y1), pt2 = (x2, y2), color=(255, 0, 0), thickness=4)
+        #     cv2.rectangle(frames, pt1 = (x1, y1), pt2 = (x2, y2), color=(255, 0, 0), thickness=4)
 
-            landmarks = predictor(image = gray, box = face)
-            # x = landmarks.part(27).x
-            # y = landmarks.part(27).y
-            for n in range(0, 28):
-                x = landmarks.part(n).x
-                y = landmarks.part(n).y
+            # landmarks = predictor(image = gray, box = faces)
+            # # x = landmarks.part(27).x
+            # # y = landmarks.part(27).y
+            # for n in range(0, 28):
+            #     x = landmarks.part(n).x
+            #     y = landmarks.part(n).y
 
-            cv2.circle(faces, center = (x, y), radius = 3, color = (0, 255, 0), thickness=3)
+            # cv2.circle(faces, center = (x, y), radius = 3, color = (0, 255, 0), thickness=3)
         # Wait key to stop video screen from shutting down
         cv2.imshow('Detecting Emotion', frames)
         if cv2.waitKey(1) & 0xFF == ord('q'):
