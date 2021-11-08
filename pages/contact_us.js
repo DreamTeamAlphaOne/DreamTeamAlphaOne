@@ -17,10 +17,10 @@ export default function ContactUs() {
       <Header title="Contact Us"
       description="If you'd like to reach us..."/>
 
-      { user ? '' 
+      { user ? <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center">
+        </main>  
       : 
       <div className="w-1/2 m-5">
-        <h2 className="text-center">Please Log In</h2>
         <Login />
       </div>
       }
