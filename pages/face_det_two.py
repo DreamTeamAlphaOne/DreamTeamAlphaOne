@@ -19,7 +19,7 @@ def faceDec():
 
             landmarks = predictor(image=gray, box=face)
 
-            for n in range(0, 68):
+            for n in range(0, 67):
                 x = landmarks.part(n).x
                 y = landmarks.part(n).y
                 cv2.circle(img=frame, center=(x, y), radius=3, color=(0,255,0), thickness=-1)
@@ -29,4 +29,5 @@ def faceDec():
             break
     cap.release()
     cv2.destroyAllWindows()
+    
 faceDec()
