@@ -3,7 +3,7 @@
 export default function Header(){
   return (
     
-<div class="w-full h-screen">
+<div class="w-full ">
    
     <nav class="sticky w-full h-auto bg-gray-200 px-8 sm:px-0">
         <div class="container flex justify-between py-4 mx-auto">
