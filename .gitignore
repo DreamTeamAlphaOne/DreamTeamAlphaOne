@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+# /Open_CV
 
 # testing
 /coverage

@@ -6,10 +6,11 @@
     "start": "next start"
   },
   "dependencies": {
-    "cross-env": "^7.0.3",
-
+    "argparse": "^2.0.1",
     "axios": "^0.24.0",
+    "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",
+    "keras": "^1.0.1",
 
     "jsonwebtoken": "^8.5.1",
 
