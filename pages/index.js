@@ -25,12 +25,13 @@ export default function Home() {
               description="Welcome to our app!"
       />
 
-      { user ? <main className="grid w-full grid-cols-2 gap-4 p-5 border-2 border-purple-500">
+      { user ? 
+      <main className="grid w-full grid-cols-2 gap-4 p-5 border-2 border-purple-500">
         <div className="w-full p-5 m-5 border-2 border-green-400">
           
         </div>
         
-        <div className="w-full m-5 border-2 border-green-400">
+        <div className="w-full p-4 m-5 border-2 border-green-400">
           <EmotionPicker />
         </div>
         
