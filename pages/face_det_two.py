@@ -1,5 +1,11 @@
 import cv2
 import dlib
+import numpy as np
+import pandas as pd
+from tqdm import tqdm
+import os
+
+
 def faceDec():
     detector = dlib.get_frontal_face_detector()
 
@@ -31,3 +37,4 @@ def faceDec():
     cv2.destroyAllWindows()
     
 faceDec()
+
