@@ -15,11 +15,12 @@ export default function Login() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        login(formItems.username, formItems.password);
+        login(event.target.username.value, event.target.password.value);
+        console.log(event.target.username.value)
     };
 
     return (
-        <div>
+        <div className="p-4 border-8 border-black rounded-lg">
         <h2 className="text-center">Please Log In To Access Our App</h2>
             <form 
                 onSubmit={handleSubmit}
