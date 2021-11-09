@@ -1,5 +1,6 @@
 import axios from 'axios'
 import useSWR from 'swr'
+import { useState } from 'react'
 
 export const apiUrl = process.env.NEXT_PUBLIC_RESOURCE_URL;
 import { useAuth } from '../contexts/auth'
@@ -55,10 +56,12 @@ export default function useResource() {
 
     // helper function to handle getting Authorization headers EXACTLY right
     function config() {
-
         return {
             headers: {
                 'Authorization': 'Bearer ' + tokens.access
+            },
+            params: {
+                emotion: 'happy'
             }
         }
     }
