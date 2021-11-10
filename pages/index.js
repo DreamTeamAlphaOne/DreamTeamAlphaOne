@@ -9,11 +9,15 @@ import useResource from '../hooks/useResource'
 
 export default function Home() {
 
+  // const [emotionState, setEmotionState] = useState('Nothing selected yet');
+
   const { user } = useAuth()
   console.log(user)
-
-  const { resources } = useResource();
-  console.log(resources);
+  
+  const { resources, emotionState, setEmotionState, handleEmotionChange } = useResource();
+  console.log(resources)
+  console.log("Emotion state from useResource", {emotionState})
+  
   
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
@@ -32,7 +36,8 @@ export default function Home() {
         </div>
         
         <div className="w-full p-4 m-5 border-2 border-green-400">
-          <EmotionPicker />
+          <EmotionPicker handleEmotionChange={handleEmotionChange} />
+          {/* <EmotionPicker /> */}
         </div>
         
       </main>
@@ -46,6 +51,10 @@ export default function Home() {
         <Login />
       </div>
       }
+
+      <p>You selected... {emotionState}</p>
+
+      {/* <button onClick={() => handleEmotionChange('Frustrated')} className="border-2 border-black-500">PUSH THIS BUTTON</button> */}
 
       <Footer />
     </div>

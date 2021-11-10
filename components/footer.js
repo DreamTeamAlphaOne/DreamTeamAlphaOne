@@ -1,6 +1,10 @@
 import Link from 'next/link'
+import useResource from '../hooks/useResource'
 
 export default function Footer() {
+
+  const {emotionState } = useResource();
+  
   return (
 <div className="w-full bg-gray-800">
     <footer className="flex flex-wrap items-center justify-between p-3 m-auto">
