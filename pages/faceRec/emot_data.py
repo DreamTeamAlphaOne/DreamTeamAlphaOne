@@ -7,7 +7,7 @@ from tqdm import tqdm
 def stringToInt(s):
     n = 0
     for i in s:
-        n = n*2 + ord(i) - ord("0")
+        n = n*10 + ord(i) - ord("0")
     return n 
 
 folderNames = ['test', 'train']
@@ -50,11 +50,11 @@ for i in tqdm(range(len(df))):
     print('im here')
     words = txt.split()
     print('now im here')
-    for j in range (2304):
+    for j in range(2304):
         xind = j // 48
         yind = j % 48
         mat[xind][yind] = stringToInt(words[j])
-    
+    print('do i get here')
     img = Image.fromarray(mat)
 
     if i < 28709:
@@ -92,3 +92,4 @@ for i in tqdm(range(len(df))):
             Surprised_test += 1
 
 print("finished, take a look!")
+print(Angry_test)
