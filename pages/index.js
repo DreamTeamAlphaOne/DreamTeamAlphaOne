@@ -52,8 +52,6 @@ export default function Home() {
       </div>
       }
 
-      <p>You selected... {emotionState}</p>
-
       {/* <button onClick={() => handleEmotionChange('Frustrated')} className="border-2 border-black-500">PUSH THIS BUTTON</button> */}
 
       <Footer />
