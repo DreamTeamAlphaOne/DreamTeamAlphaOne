@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Header from '../components/header'
+import Footer from '../components/footer'
 
-import MainPage from '../components/MainPage'
-import Login from '../components/Login'
+import MainPage from '../components/mainpage'
+import Login from '../components/login'
 
 import { useAuth } from '../contexts/auth'
 import useResource from '../hooks/useResource'

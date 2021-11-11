@@ -1,5 +1,5 @@
-import EmotionPicker from '../components/EmotionPicker'
-import SuggestedMovie from '../components/SuggestedMovie'
+import EmotionPicker from './emotionpicker'
+import SuggestedMovie from './suggestedmovie'
 import { useState } from 'react'
 
 export default function MainPage(props) {
