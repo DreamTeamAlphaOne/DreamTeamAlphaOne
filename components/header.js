@@ -20,11 +20,6 @@ export default function Header(props){
                         Home
                     </a></Link>
                 </li>
-                <li className="mr-6 font-semibold uppercase">
-                    <Link href="/about_us"><a className='transition hover:text-blue-600'>
-                        About Us
-                    </a></Link>
-                </li>
                 {user ? 
                 <li className="mr-6 font-semibold uppercase">
                     <Link href="/saved_movies"><a className='transition hover:text-blue-600'>
