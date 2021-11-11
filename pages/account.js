@@ -1,5 +1,9 @@
 import Head from 'next/head'
+<<<<<<< HEAD
 import Header from '../components/header'
+=======
+import Header from '../components/Header'
+>>>>>>> 90a440f462d04d41ddfc891fcb3368be57a22135
 import Footer from '../components/Footer'
 import Login from '../components/Login'
 import { useAuth } from '../contexts/auth'

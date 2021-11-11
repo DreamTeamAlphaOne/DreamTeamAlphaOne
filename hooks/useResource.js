@@ -1,5 +1,6 @@
 import axios from 'axios'
 import useSWR from 'swr'
+import { useState } from 'react'
 
 export const apiUrl = process.env.NEXT_PUBLIC_RESOURCE_URL;
 import { useAuth } from '../contexts/auth'
@@ -8,7 +9,15 @@ export default function useResource() {
 
     const { tokens, logout } = useAuth()
 
+    const [emotionState, setEmotionState] = useState('happy');
+
     const { data, error, mutate } = useSWR([apiUrl, tokens], fetchResource);
+
+    function handleEmotionChange(event, emotion_selected) {
+        event.preventDefault();
+        setEmotionState(emotion_selected)
+        console.log("from the useResource", emotion_selected)
+    }
 
     async function fetchResource(url) {
 
@@ -55,11 +64,13 @@ export default function useResource() {
 
     // helper function to handle getting Authorization headers EXACTLY right
     function config() {
-
         return {
             headers: {
                 'Authorization': 'Bearer ' + tokens.access
-            }
+            },
+            params : {
+                emotion: emotionState
+            },
         }
     }
 
@@ -78,6 +89,9 @@ export default function useResource() {
         createResource,
         deleteResource,
         updateResource,
+        handleEmotionChange,
+        setEmotionState,
+        emotionState,
     }
 }
 
