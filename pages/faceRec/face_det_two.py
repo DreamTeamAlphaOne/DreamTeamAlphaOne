@@ -1,3 +1,4 @@
+from tensorflow.keras import models
 import cv2
 import dlib
 import numpy as np
@@ -31,7 +32,7 @@ def faceDec():
                 cv2.circle(img=frame, center=(x, y), radius=3, color=(0,255,0), thickness=-1)
         cv2.imshow(winname="face", mat=frame)
 
-        if cv2.waitKey(delay=1) == 27:
+        if cv2.waitKey(delay=1) & 0xFF == ord('q'):
             break
     cap.release()
     cv2.destroyAllWindows()
