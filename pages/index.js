@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/header'
-import Footer from '../components/footer'
+import Footer from '../components/Footer'
 import ShowMovie from '../components/show_movie'
 import Login from '../components/Login'
 import { useAuth } from '../contexts/auth'

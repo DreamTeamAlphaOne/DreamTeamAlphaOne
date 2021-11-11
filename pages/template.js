@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/header'
-import Footer from '../components/footer'
+import Footer from '../components/Footer'
 import Login from '../components/Login'
 import { useAuth } from '../contexts/auth'
 import { useResources } from '../hooks/useResource'
