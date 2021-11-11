@@ -29,7 +29,7 @@ export default function ShowMovie(){
       const movie_title = setMovie_title(movie.title)
       const movie_overview = setMovie_overview(movie.overview)
       const poster_path = setPoster_path("https://image.tmdb.org/t/p/w300"+movie.poster_path)
-      console.log(movieArray)
+      // console.log(movieArray)
     })
   
   function handleChange(event) {
