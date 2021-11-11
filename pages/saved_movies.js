@@ -1,7 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import Header from '../components/header'
-import Footer from '../components/footer'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 import Login from '../components/Login'
 import { useAuth } from '../contexts/auth'
 import useResource from '../hooks/useResource'
@@ -33,10 +32,6 @@ export default function SavedMovies(props) {
             <div>
               <div className="border-2 border-black">
                       {movie.title}
-                      {/* <Image src={movie.image_url} 
-                      alt={movie.title}  
-                      height={250}
-                      width={130}/> */}
               </div>
               
             </div>

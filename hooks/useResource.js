@@ -13,7 +13,8 @@ export default function useResource() {
 
     const { data, error, mutate } = useSWR([apiUrl, tokens], fetchResource);
 
-    function handleEmotionChange(emotion_selected) {
+    function handleEmotionChange(event, emotion_selected) {
+        event.preventDefault();
         setEmotionState(emotion_selected)
         console.log("from the useResource", emotion_selected)
     }
