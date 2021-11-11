@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import useResource from '../hooks/useResource'
 
 export default function Footer() {
   

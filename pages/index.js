@@ -29,7 +29,8 @@ export default function Home() {
 
       { user ? 
       <MainPage handleEmotionChange={handleEmotionChange}
-                emotionState={emotionState}/>
+                emotionState={emotionState}
+                resources={resources}/>
       
       : 
       <div className="w-1/2 m-5">

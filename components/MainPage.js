@@ -1,12 +1,12 @@
 import EmotionPicker from './emotionpicker'
 import SuggestedMovie from './suggestedmovie'
-import { useState } from 'react'
 
 export default function MainPage(props) {
 
-    let showSuggestionBox = false
+    let showSuggestionBox = true
 
-    function wasEmotionPicked() {
+    function wasEmotionPicked(event) {
+        event.preventDefault();
         showSuggestionBox = true
         console.log("Function was triggered")
         console.log(showSuggestionBox)
@@ -20,8 +20,9 @@ export default function MainPage(props) {
             </div>
         
             <div className="w-full p-4 m-5">
+                
                 { showSuggestionBox ?
-                <SuggestedMovie />
+                <SuggestedMovie resources={props.resources}/>
                 :
                 <EmotionPicker handleEmotionChange={props.handleEmotionChange}
                                 emotionState={props.emotionState}
