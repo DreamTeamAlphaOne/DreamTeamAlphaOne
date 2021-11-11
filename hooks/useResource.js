@@ -11,12 +11,21 @@ export default function useResource() {
 
     const [emotionState, setEmotionState] = useState('happy');
 
+    const [buttonState, setButtonState] = useState(false);
+
     const { data, error, mutate } = useSWR([apiUrl, tokens], fetchResource);
 
     function handleEmotionChange(event, emotion_selected) {
         event.preventDefault();
-        setEmotionState(emotion_selected)
-        console.log("from the useResource", emotion_selected)
+        setEmotionState(emotion_selected);
+        setButtonState(true)
+        // console.log("from the useResource", emotion_selected);
+        console.log("button state in emotion change", buttonState);
+    }
+
+    function showSuggestionOrPicker() {
+        setButtonState(false)
+        console.log("button state in movie exit", buttonState)
     }
 
     async function fetchResource(url) {
@@ -92,6 +101,8 @@ export default function useResource() {
         handleEmotionChange,
         setEmotionState,
         emotionState,
+        buttonState, setButtonState,
+        showSuggestionOrPicker,
     }
 }
 
