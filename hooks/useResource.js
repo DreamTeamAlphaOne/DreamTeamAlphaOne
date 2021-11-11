@@ -9,7 +9,7 @@ export default function useResource() {
 
     const { tokens, logout } = useAuth()
 
-    const [emotionState, setEmotionState] = useState('Nothing Here');
+    const [emotionState, setEmotionState] = useState('happy');
 
     const { data, error, mutate } = useSWR([apiUrl, tokens], fetchResource);
 
@@ -67,7 +67,9 @@ export default function useResource() {
             headers: {
                 'Authorization': 'Bearer ' + tokens.access
             },
-            params : emotionState,
+            params : {
+                emotion: emotionState
+            },
         }
     }
 
