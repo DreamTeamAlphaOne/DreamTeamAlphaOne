@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import Header from '../components/header'
-import Footer from '../components/footer'
-import Login from '../components/login'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import Login from '../components/Login'
 import { useAuth } from '../contexts/auth'
 
 export default function AboutUs() {

@@ -1,4 +1,4 @@
-export default function MovieSuggestion(props) {
+export default function SuggestedMovie(props) {
     
     console.log("resources in suggestedmovie", props.resources)
     

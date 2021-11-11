@@ -1,5 +1,5 @@
-import EmotionPicker from './emotionpicker'
-import SuggestedMovie from './suggestedmovie'
+import EmotionPicker from './EmotionPicker'
+import SuggestedMovie from './SuggestedMovie'
 
 export default function MainPage(props) { 
     
