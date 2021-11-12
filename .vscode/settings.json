@@ -2,6 +2,7 @@
     "python.analysis.extraPaths": [
         "./dlib/python_examples",
         "./pages/dlib/python_examples",
-        "./openCV/openCV/modules/python/package"
+        "./openCV/openCV/modules/python/package",
+        "./Open_CV/openCV/modules/python/package"
     ]
 }
