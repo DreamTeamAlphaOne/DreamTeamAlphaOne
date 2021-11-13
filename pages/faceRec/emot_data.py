@@ -6,9 +6,6 @@ from tqdm import tqdm
 from .src.img import test
 from .src.img import train
 
-# testFolder = test
-# trainFolder = train
-
 def stringToInt(s):
     n = 0
     for i in s:

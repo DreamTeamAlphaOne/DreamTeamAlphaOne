@@ -37,9 +37,7 @@ export default function SavedMovies(props) {
       <div className="w-1/2 m-5">
         <Login />
       </div>
-      }
-      
-      
+      }      
       
       <Footer />
     </div>

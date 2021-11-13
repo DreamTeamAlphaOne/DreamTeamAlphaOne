@@ -2,9 +2,7 @@
 import React, { useState } from 'react';
 
 const superagent = require('superagent');
-//require('dotenv').config();
 const MOVIECACHE = {};
-//const { REACT_APP_MY_ENV } = process.env;
 
 export default function ShowMovie(){
   const [movie, setMovie] = useState('');
@@ -29,7 +27,6 @@ export default function ShowMovie(){
       const movie_title = setMovie_title(movie.title)
       const movie_overview = setMovie_overview(movie.overview)
       const poster_path = setPoster_path("https://image.tmdb.org/t/p/w300"+movie.poster_path)
-      // console.log(movieArray)
     })
   
   function handleChange(event) {
