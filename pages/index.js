@@ -11,11 +11,8 @@ import useResource from '../hooks/useResource'
 export default function Home() {
 
   const { user } = useAuth()
-  console.log(user)
   
-  const { resources, emotionState, handleEmotionChange } = useResource();
-  console.log(resources)
-  console.log("Emotion state from useResource", {emotionState})
+  const { loading, resources, emotionState, buttonState, handleEmotionChange, showSuggestionOrPicker } = useResource();
   
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
@@ -30,7 +27,10 @@ export default function Home() {
       { user ? 
       <MainPage handleEmotionChange={handleEmotionChange}
                 emotionState={emotionState}
-                resources={resources}/>
+                buttonState={buttonState}
+                resources={resources}
+                loading={loading}
+                showSuggestionOrPicker={showSuggestionOrPicker}/>
       
       : 
       <div className="w-1/2 m-5">

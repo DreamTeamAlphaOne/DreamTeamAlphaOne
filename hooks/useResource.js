@@ -11,12 +11,18 @@ export default function useResource() {
 
     const [emotionState, setEmotionState] = useState('happy');
 
+    const [buttonState, setButtonState] = useState(false);
+
     const { data, error, mutate } = useSWR([apiUrl, tokens], fetchResource);
 
     function handleEmotionChange(event, emotion_selected) {
         event.preventDefault();
-        setEmotionState(emotion_selected)
-        console.log("from the useResource", emotion_selected)
+        setEmotionState(emotion_selected);
+        setButtonState(true)
+    }
+
+    function showSuggestionOrPicker() {
+        setButtonState(false)
     }
 
     async function fetchResource(url) {
@@ -39,7 +45,7 @@ export default function useResource() {
 
         try {
             await axios.post(apiUrl, info, config());
-            mutate(); // mutate causes complete collection to be refetched
+            mutate(); 
         } catch (error) {
             handleError(error);
         }
@@ -50,19 +56,12 @@ export default function useResource() {
         try {
             const url = apiUrl + id;
             await axios.delete(url, config());
-            mutate(); // mutate causes complete collection to be refetched
+            mutate();
         } catch (error) {
             handleError(error);
         }
     }
 
-    async function updateResource(resource) {
-        // STRETCH
-        // Add ability for user to update an existing resource
-    }
-
-
-    // helper function to handle getting Authorization headers EXACTLY right
     function config() {
         return {
             headers: {
@@ -76,9 +75,6 @@ export default function useResource() {
 
     function handleError(error) {
         console.error(error);
-        // currently just log out on error
-        // but a common error will be short lived token expiring
-        // STRETCH: refresh the access token when it has expired
         logout();
     }
 
@@ -88,14 +84,10 @@ export default function useResource() {
         loading: tokens && !error && !data,
         createResource,
         deleteResource,
-        updateResource,
         handleEmotionChange,
         setEmotionState,
         emotionState,
+        buttonState, setButtonState,
+        showSuggestionOrPicker,
     }
 }
-
-/* STRETCH
-This approach works, but it's not very snappy for the user.
-Check the SWR docs to see if you can "optomistically" render updated state while the API response is pending.
-*/
